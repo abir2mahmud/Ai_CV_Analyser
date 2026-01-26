@@ -1,14 +1,14 @@
 import type { Route } from "./+types/home";
 import Navbar from "~/Components/Navbar";
-import {resumes} from "~/constants";
+import { resumes } from "~/constants";
 import ResumeCard from "~/Components/ResumeCard";
-import {resume} from "react-dom/server";
 
-export function meta({}: Route.MetaArgs) {
-  return [
-    { title: "Ai CV Analyser" },
-    { name: "description", content: "Get feedback from Ai for your dream job!" },
-  ];
+
+export function meta({ }: Route.MetaArgs) {
+    return [
+        { title: "Ai CV Analyser" },
+        { name: "description", content: "Get feedback from Ai for your dream job!" },
+    ];
 }
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
         <Navbar />
 
         <section className="main-section">
-            <div className="page-heading">
+            <div className="page-heading py-16">
                 <h1>Track Your Applications & Resume Ratings</h1>
                 <h2>Review your submissions and check AI-Powered feedback</h2>
             </div>
