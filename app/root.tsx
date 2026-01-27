@@ -25,12 +25,12 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
-export function Layout({ children }: { children: React.ReactNode })
+export function Layout({ children }: { children: React.ReactNode }) {
   const { init } = usePuterStore();
 
   useEffect(() => {
     init()
-  },[init]);
+  }, [init]);
 
   return (
     <html lang="en">
@@ -48,7 +48,7 @@ export function Layout({ children }: { children: React.ReactNode })
       </body>
     </html>
   );
-
+}
 export default function App() {
   return <Outlet />;
 }
